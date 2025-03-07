@@ -43,6 +43,17 @@ header {
     color: black;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -203,7 +214,7 @@ nav ul li a:hover {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 772px) {
     header {
         padding: 15px 20px;
     }
@@ -218,9 +229,39 @@ nav ul li a:hover {
 
     nav ul li a {
         font-size: 16px;
+        padding: 0 2px;
     }
 
-    @media (max-width: 760px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 30%;
+        background: white;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .menu li {
+        padding: 15px 0;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .social-links{
+        display: none;
+    }
+
+    @media (max-width: 480px) {
         .hero {
             height: auto;
             padding: 100px 20px;
@@ -248,6 +289,24 @@ nav ul li a:hover {
         .mouse-scroll {
             margin-top: 20px;
             bottom: 55vh;
+        }
+
+        .menu-btn {
+            font-size: 22px;
+            padding: 8px;
+        }
+    
+        .menu {
+            top: 45px;
+        }
+    
+        .menu li {
+            padding: 12px 0;
+        }
+    
+        nav ul li a {
+            font-size: 14px;
+            padding: 0 15px;
         }
     }
     
@@ -374,7 +433,7 @@ nav ul li a:hover {
         color: white;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 772px) {
         .about-content {
             flex-direction: column;
             text-align: center;
@@ -479,7 +538,7 @@ nav ul li a:hover {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 772px) {
         .project {
             flex-direction: column;
             text-align: center;
