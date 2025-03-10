@@ -790,58 +790,85 @@ nav ul li a:hover {
 
     .contact_form {
         background: white;
-        padding: 50px;
+        padding: 40px;
         border-radius: 10px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        width: 750px; 
+        width: 100%;
+        max-width: 750px;
         text-align: left;
+        margin: auto;
     }
     
     .contact_form label {
         font-size: 14px;
         font-weight: bold;
         display: block;
-        margin: 10px 0 5px;
+        margin: 12px 0 6px;
+        color: #333;
     }
     
     .contact_form input,
     .contact_form textarea {
         width: 100%;
-        padding: 18px;
-        border: none;
-        background: #f0f0f0;
-        border-radius: 15px;
-        margin-bottom: 20px;
+        padding: 14px;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+        border-radius: 8px;
+        margin-bottom: 15px;
         font-size: 16px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .contact_form input:focus,
+    .contact_form textarea:focus {
+        background: #fff;
+        border-color: #ff5c33;
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 92, 51, 0.5);
     }
     
     .contact_form textarea {
-        height: 180px;
-        resize: none;
+        height: 150px;
+        resize: vertical;
     }
     
     .contact-btn {
         display: block;
-        width: 130px; 
-        padding: 12px;
-        font-size: 14px;
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
         font-weight: bold;
+        text-transform: uppercase;
+        background: #ff5c33;
         color: white;
-        background: #0056b3;
         border: none;
-        border-radius: 15px;
+        border-radius: 8px;
         cursor: pointer;
-        transition: 0.3s;
-        margin: 0 auto;
-        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2); 
+        transition: 0.3s ease-in-out;
     }
     
     .contact-btn:hover {
-        background: whitesmoke;
-        color: black;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        background: #e04c2d;
     }
 
+    @media (max-width: 772px) {
+        .contact_form {
+            padding: 30px;
+            width: 90%;
+        }
+    
+        .contact_form input,
+        .contact_form textarea {
+            padding: 12px;
+            font-size: 14px;
+        }
+    
+        .contact-btn {
+            padding: 12px;
+            font-size: 14px;
+        }
+    }
+    
     footer {
         background: black;
         color: white;
